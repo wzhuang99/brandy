@@ -1,0 +1,33 @@
+{
+  "name": "brandy",
+  "version": "1.0.0",
+  "description": "A project of HTL3 Rennweg",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wei Zhuang",
+  "license": "ISC",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.7",
+    "angular": "^1.7.9",
+    "angular-animate": "^1.7.0",
+    "angular-aria": "^1.7.0",
+    "angular-cookies": "^1.7.9",
+    "angular-locale": "^0.3.1",
+    "angular-material": "http://github.com/angular/bower-material/tarball/master",
+    "angular-messages": "^1.7.0",
+    "angular-resource": "^1.7.9",
+    "angular-sanitize": "^1.7.9",
+    "moment": "^2.24.0",
+    "videogular": "^2.2.1",
+    "videogular-angulartics": "^1.4.4",
+    "videogular-buffering": "^1.4.4",
+    "videogular-controls": "^1.4.4",
+    "videogular-dash": "^1.4.4",
+    "videogular-overlay-play": "^1.4.4",
+    "videogular-poster": "^1.4.4",
+    "videogular-themes-default": "^1.4.4",
+    "videogular-youtube": "^2.0.6"
+  }
+}

@@ -1,0 +1,56 @@
+<div class="wrapper" layout="column" ng-cloak>
+    <div class="wrapper-content" flex>
+        <side-navbar></side-navbar>
+        <md-content layout-padding class="content">
+            <!-- shows when sideBar is closed -->
+            <div class="flex-wrapper" layout="row" ng-hide="$ctrl.opened() === true">
+                <div class="flex-space-1" flex-gt-sm="20" flex="5"></div>
+                <div class="flex-space-2" flex>
+                    <md-card md-theme-watch>
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">Was ist Brandy?</span>
+                                <span class="md-subhead">
+                                        Brandy ist ein Diplomarbeits-Projekt der HTL Rennweg im Jahrgang 2019/20.
+                                        Das Hauptziel ist es der Schule ein Video zu liefern, welches SchülerInnen
+                                        über die Brandschutzmaßnahmen und Verhaltensweisen informiert. Vorallem in
+                                        den unteren Klassen ist es eine große Erleichterung Erklärvideos zu präsentieren,
+                                        in denen alle Informationen kompakt und medientechnisch aufbereitet und verständlich
+                                        vermittelt werden. <br>
+                                        Brandy hat im Laufe der Diplomarbeit, neben einem Erklärvideo, ein interaktives Video für die SchülerInnen der HTL3 Rennweg produziert.
+                                        Durch ein integriertes Quizsystem können die Inhalte im Video abgeprüft werden.
+                                    </span>
+                            </md-card-title-text>
+                        </md-card-title>
+                    </md-card>
+                </div>
+                <div class="flex-space-3" flex-gt-sm="20" flex="5"></div>
+            </div>
+            <!-- shows when sideBar is opened -->
+            <div class="flex-wrapper" layout="row" layout-align="center center"
+                 ng-hide="$ctrl.opened()===false || $ctrl.opened() === undefined">
+                <div class="flex-space-1" flex="20"></div>
+                <div class="flex-space-2" flex>
+                    <md-card md-theme-watch>
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">Was ist Brandy?</span>
+                                <span class="md-subhead">
+                                        Brandy ist ein Diplomarbeits-Projekt der HTL Rennweg im Jahrgang 2019/20.
+                                        Das Hauptziel ist es der Schule ein Video zu liefern, welches SchülerInnen
+                                        über die Brandschutzmaßnahmen und Verhaltensweisen informiert. Vorallem in
+                                        den ersten Klassen ist es eine große Erleichterung ein Lernvideo zu präsentieren,
+                                        in dem alle Informationen kompakt und medientechnisch aufbereitet und verständlich
+                                        vermittelt werden. <br>
+                                        Brandy hat im Laufe der Diplomarbeit, neben einem Erklärvideo, ein interaktives Video für die SchülerInnen der HTL3 Rennweg produziert.
+                                        Durch ein integriertes Quizsystem können die Inhalte im Video abgeprüft werden.
+                                    </span>
+                            </md-card-title-text>
+                        </md-card-title>
+                    </md-card>
+                </div>
+                <div class="flex-space-3" flex="20"></div>
+            </div>
+        </md-content>
+    </div>
+</div>

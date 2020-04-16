@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/***** navigation *****/
+
+.nav-transparent {
+    background-color: white !important;
+    z-index: 3000;
+}
+
+.nav-topSide {
+    height: 7.6%;
+}
+
+.nav-navItems {
+    padding-left:6%
+}
+
+.nav-stickBar {
+    position: fixed;
+    top: 0;
+}
+
+.nav-toolLogo {
+    padding:0.5%;
+    width:10%;
+}
+
+.icons {
+    color: black !important;
+}
+
+md-sidenav {
+    width: 19.5%
+}
+
+/***** impressum, projects, product, overview, team *****/
+
+.content {
+    overflow:visible;
+}
+
+
+/***** videoplayer *****/
+
+
+.vp-player {
+    position: relative;
+}
+
+.vp-interactive, .vp-quiz, .vp-answerQuiz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2147483647;
+}
+
+.vp-innerLay {
+    box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.vp-correct {
+    color:green;
+}
+
+.vp-wrong {
+    color:red;
+}
+
+.vp-answer, .vp-interBtns, .vp-questions, .vp-correct, .vp-wrong, .md-headline, .vp-interactive, .vp-quiz, .vp-answerQuiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/****** team *****/
+
+.team-skrobic, .team-zhuang {
+    width: 30%;
+}
+
+.team-name, .team-title, .team-description {
+    margin: 0;
+}
+
+.team-title {
+    color: grey;
+    font-size: 1.2em;
+}
+
+.team-description {
+    color: grey;
+}
+
+/***** mobile view *****/
+
+@media only screen and (max-width: 600px) {
+
+    videogular {
+        width: 192px;
+        height: 108px;
+    }
+
+    /***** navigation *****/
+
+    md-sidenav {
+        width: 100% !important;
+        max-width: 540px;
+    }
+
+    .nav-toolLogo {
+        padding:0.5%;
+        width: 35% !important;
+        height: 10%;
+    }
+
+
+    /***** team *****/
+
+    .team-skrobic, .team-zhuang{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:50%;
+        height:50%;
+    }
+}

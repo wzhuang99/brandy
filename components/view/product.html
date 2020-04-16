@@ -1,0 +1,42 @@
+<div class="wrapper" layout="column" style="height:100%;" ng-cloak>
+    <div class="wrapper-content" flex>
+        <side-navbar></side-navbar>
+        <md-content class="content" flex layout-padding >
+            <!-- shows when sideBar is closed -->
+            <div class="flex-wrapper" layout="row" layout-align="center center" ng-hide="$ctrl.opened() === true">
+                <div class="flex-space-1" flex="20"></div>
+                <div class="flex-space-2" flex>
+                    <md-card class="card" md-theme-watch>
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">interaktives Brandschutzvideo</span>
+                                <span class="md-subhead">
+                                        <videoplayer></videoplayer>
+                                    </span>
+                            </md-card-title-text>
+                        </md-card-title>
+                    </md-card>
+                </div>
+                <div class="flex-space-3" flex="20"></div>
+            </div>
+            <!-- shows when sideBar is opened -->
+            <div class="flex-wrapper" layout="row" layout-align="center center"
+                 ng-hide="$ctrl.opened() === false || $ctrl.opened() === undefined">
+                <div class="flex-space-1" flex="20"></div>
+                <div class="flex-space-2" flex>
+                    <md-card md-theme-watch>
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">interaktives Brandschutzvideo</span>
+                                <span class="md-subhead">
+                                        <videoplayer></videoplayer>
+                                    </span>
+                            </md-card-title-text>
+                        </md-card-title>
+                    </md-card>
+                </div>
+                <div class="flex-space-3" flex="10"></div>
+            </div>
+        </md-content>
+    </div>
+</div>

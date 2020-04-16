@@ -1,0 +1,51 @@
+<!-- toolbar -->
+<md-toolbar class="nav-transparent" layout="row" md-whiteframe="1">
+    <md-button ng-click="$ctrl.open()">
+        <md-icon class="icons">
+            menu
+        </md-icon>
+    </md-button>
+    <div flex></div>
+    <img class="nav-toolLogo" ng-src="components/material/brandy_logo.png">
+    <div flex></div>
+    <md-button ng-click="$ctrl.backBtn()">
+        <md-icon class="icons">
+            keyboard_backspace
+        </md-icon>
+    </md-button>
+</md-toolbar>
+<!-- sideBar -->
+<md-sidenav class="md-sidenav-left-nav-stickBar" md-component-id='left' md-is-open="false"
+            md-disable-backdrop="true" md-whiteframe="1">
+    <div class="nav-topSide" layout="row">
+        <md-button>
+            <md-icon>
+                menu
+            </md-icon>
+        </md-button>
+    </div>
+    <md-content>
+        <md-list flex>
+            <md-list-item ui-sref="overviewState" ng-click="$ctrl.open()">
+                <md-icon class="nav-navItems" >home</md-icon>
+                <p>Start</p>
+            </md-list-item>
+            <md-list-item ui-sref="projectsState" ng-click="$ctrl.open()">
+                <md-icon class="nav-navItems" >fireplace</md-icon>
+                <p>Projekt</p>
+            </md-list-item>
+            <md-list-item ui-sref="teamState" ng-click="$ctrl.open()">
+                <md-icon class="nav-navItems">group</md-icon>
+                <p>Team</p>
+            </md-list-item>
+            <md-list-item ui-sref="impressumState" ng-click="$ctrl.open()">
+                <md-icon class="nav-navItems" >assignment</md-icon>
+                <p>Impressum</p>
+            </md-list-item>
+            <md-list-item ui-sref="productState" ng-click="$ctrl.open()">
+                <md-icon class="nav-navItems" >movie</md-icon>
+                <p>Video</p>
+            </md-list-item>
+        </md-list>
+    </md-content>
+</md-sidenav>

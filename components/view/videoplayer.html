@@ -1,0 +1,119 @@
+<div class="vp-player">
+    <div>
+        <!-- interactive player -->
+        <videogular vg-complete="onCompleteVideo()"
+                    vg-player-ready="$ctrl.onPlayerReady($API)"
+                    vg-cue-points="$ctrl.config.cuePoints"
+                    vg-theme="$ctrl.config.theme"
+        >
+            <vg-media vg-src="$ctrl.config.sources" vg-youtube="rel=1;showinfo=1"></vg-media>
+            <!-- controls -->
+            <vg-controls vg-autohide="true"
+                         vg-autohide-time="2000"
+                         ng-show="$ctrl.showControl">
+                <vg-play-pause-button></vg-play-pause-button>
+                <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+                <vg-scrub-bar>
+                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                </vg-scrub-bar>
+                <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+                <vg-volume>
+                    <vg-mute-button></vg-mute-button>
+                    <vg-volume-bar></vg-volume-bar>
+                </vg-volume>
+                <vg-fullscreen-button></vg-fullscreen-button>
+            </vg-controls>
+            <vg-overlay-play ng-show="$ctrl.showControl"></vg-overlay-play>
+
+            <!-- first interactive question -->
+            <div class="vp-interactive" ng-show="$ctrl.showFirst">
+                <div class="vp-innerLay">
+                    <h2 class="vp-questions">Was würdest du dir gerne anschauen?</h2>
+                    <div class="vp-innerLay" layout="row">
+                        <div class="vp-interBtns" layout="row" layout-wrap="">
+                            <md-button flex-gt-sm="20" ng-click="$ctrl.scene(6.5)">Feuer am Gang</md-button>
+                            <md-button flex-gt-sm="20" ng-click="$ctrl.scene(60.8)">Feuerlöscher</md-button>
+                            <md-button flex-gt-sm="20" ng-click="$ctrl.scene(87)">Feueralarm</md-button>
+                            <md-button flex-gt-sm="20" ng-click="$ctrl.scene(164)">Lift</md-button>
+                            <md-button flex-gt-sm="20" ng-click="$ctrl.scene(175.5)">Notausgang</md-button>
+                            <md-button flex-gt-sm="20" ng-click="$ctrl.scene(200.5)">Probleme</md-button>
+                            <md-button flex-gt-sm="20" ng-click="$ctrl.scene(230)">Freistunde</md-button>
+                            <md-button flex-gt-sm="20" ng-click="$ctrl.scene(249.5)">Sammelplatz</md-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- interactive quiz -->
+            <div class="vp-quiz" ng-show="$ctrl.showQuiz">
+                <div class="vp-innerLay">
+                    <h2 class="vp-questions">{{$ctrl.question}}</h2>
+                    <div class="vp-innerLay" layout="column">
+                        <md-radio-group ng-model="$ctrl.answerOpt">
+                            <md-radio-button ng-value="$ctrl.answer1">{{$ctrl.answer1}}</md-radio-button>
+                            <md-radio-button ng-value="$ctrl.answer2">{{$ctrl.answer2}}</md-radio-button>
+                            <md-radio-button ng-value="$ctrl.answer3">{{$ctrl.answer3}}</md-radio-button>
+                            <md-radio-button ng-value="$ctrl.answer4">{{$ctrl.answer4}}</md-radio-button>
+                        </md-radio-group>
+                        <md-button ng-click="$ctrl.corrAnswer()">Senden</md-button>
+                    </div>
+                </div>
+            </div>
+            <!-- evaluated quiz -->
+            <div class="vp-answerQuiz" ng-show="$ctrl.showAnswer">
+                <div class="vp-innerLay">
+                    <h2 class="vp-questions">{{$ctrl.question}}</h2>
+                    <div class="vp-innerLay" layout="column">
+                        <h3 class="vp-correct" ng-show="$ctrl.correct === 'Richtig!'">{{$ctrl.correct}}</h3>
+                        <h3 class="vp-wrong" ng-show="$ctrl.correct ==='Leider falsch!'">{{$ctrl.correct}}</h3>
+                        <strong class="vp-answer">Antwort: {{$ctrl.solution}}</strong>
+                        <div></div>
+                        <div class="vp-interBtns" layout="row" layout-wrap="">
+                            <!-- farbige Buttons je nach Szene-->
+                            <md-button ng-show="$ctrl.btnCol1" style="color: rgb(241,90,36);" flex="20"
+                                       ng-click="$ctrl.scene(6.5)">Feuer am Gang
+                            </md-button>
+                            <md-button ng-hide="$ctrl.btnCol1" flex="20" ng-click="$ctrl.scene(6.5)">Feuer am Gang
+                            </md-button>
+                            <md-button ng-show="$ctrl.btnCol2" flex="20" style="color: rgb(241,90,36);"
+                                       ng-click="$ctrl.scene(60.8)">Feuerlöscher
+                            </md-button>
+                            <md-button ng-hide="$ctrl.btnCol2" flex="20" ng-click="$ctrl.scene(60.8)">Feuerlöscher
+                            </md-button>
+                            <md-button ng-show="$ctrl.btnCol3" flex="20" style="color: rgb(241,90,36);"
+                                       ng-click="$ctrl.scene(87)">Feueralarm
+                            </md-button>
+                            <md-button ng-hide="$ctrl.btnCol3" flex="20" ng-click="$ctrl.scene(87)">Feueralarm
+                            </md-button>
+                            <md-button ng-show="$ctrl.btnCol4" flex="20" style="color: rgb(241,90,36);"
+                                       ng-click="$ctrl.scene(164)">Lift
+                            </md-button>
+                            <md-button ng-hide="$ctrl.btnCol4" flex="20" ng-click="$ctrl.scene(164)">Lift</md-button>
+                            <md-button ng-show="$ctrl.btnCol5" flex="20" style="color: rgb(241,90,36);"
+                                       ng-click="$ctrl.scene(175.5)">Notausgang
+                            </md-button>
+                            <md-button ng-hide="$ctrl.btnCol5" flex="20" ng-click="$ctrl.scene(175.5)">Notausgang
+                            </md-button>
+                            <md-button ng-show="$ctrl.btnCol6" flex="20" style="color: rgb(241,90,36);"
+                                       ng-click="$ctrl.scene(200.5)">Probleme
+                            </md-button>
+                            <md-button ng-hide="$ctrl.btnCol6" flex="20" ng-click="$ctrl.scene(200.5)">Probleme
+                            </md-button>
+                            <md-button ng-show="$ctrl.btnCol7" flex="20" style="color: rgb(241,90,36);"
+                                       ng-click="$ctrl.scene(230)">Freistunde
+                            </md-button>
+                            <md-button ng-hide="$ctrl.btnCol7" flex="20" ng-click="$ctrl.scene(230)">Freistunde
+                            </md-button>
+                            <md-button ng-show="$ctrl.btnCol8" flex="20" style="color: rgb(241,90,36);"
+                                       ng-click="$ctrl.scene(249.5)">Sammelplatz
+                            </md-button>
+                            <md-button ng-hide="$ctrl.btnCol8" flex="20" ng-click="$ctrl.scene(249.5)">Sammelplatz
+                            </md-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </videogular>
+    </div>
+</div>
+
+

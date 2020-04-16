@@ -1,0 +1,141 @@
+<div class="wrapper" layout="column" ng-cloak>
+    <div class="wrapper-content" flex>
+        <side-navbar></side-navbar>
+        <md-content class="content" flex layout-padding >
+            <!-- shows when sideBar is opened -->
+            <div class="flex-wrapper" layout="row" layout-xs="column" flex ng-hide="$ctrl.opened()=== false || $ctrl.opened() === undefined">
+                <div class="flex-space-1" flex-gt-sm="20" flex="shrink"></div>
+                <div class="flex-space-2" flex>
+                    <!-- information about the team-->
+                    <md-card>
+                        <md-card-title>
+                            <md-card-title-text layout-align="start center">
+                                <span class="md-headline">Team</span>
+                                <span class="md-subhead"></span>
+                                <br>
+                                <div layout="column">
+                                    <div layout-padding layout="row">
+                                        <img class="team-zhuang" ng-src="components/material/brandy_zhuang.png">
+                                        <div class="text" layout="column">
+                                            <h3 class="team-name">Wei Zhuang</h3>
+                                            <h4 class="team-title">Projektleiter</h4>
+                                            <p class="team-description">
+                                                Projektmanagement<br>
+                                                Planung der didaktischen Konzepte<br>
+                                                Websiteprogrammierung <br>
+                                                Implementation der interaktiven Konzepte
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div layout-padding layout="row">
+                                        <img class="team-skrobic" ng-src="components/material/brandy_skrobic.png">
+                                        <div layout="column">
+                                            <h3 class="team-name">Stefan Skrobic</h3>
+                                            <h4 class="team-title">Stv. Projektleiter</h4>
+                                            <p class="team-description">
+                                                Planung der technischen Filmdokumente<br>
+                                                Post-Produktion<br>
+                                                Audiotechnik <br>
+                                                2D-Animation
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </md-card-title-text>
+                        </md-card-title>
+                    </md-card>
+                </div>
+                <div class="flex-space-contactInfo" flex="25">
+                    <md-card>
+                        <md-card-title>
+                            <md-card-title-text layout-align="start center">
+                                <span class="md-headline">Kontakt</span>
+                                <span class="md-subhead">Falls Sie mit uns Kontakt aufnehmen möchten,
+                                    erreichen Sie uns unter folgenden E-Mail-Adressen:
+                                    <ul style="list-style-type:none">
+                                        <li>wei.zhuang@htl.rennweg.at</li>
+                                        <li>stefan.skrobic@htl.rennweg.at</li>
+                                    </ul>
+                                        oder Sie besuchen uns in der HTL Rennweg:
+                                        <ul style="list-style-type:none">
+                                            <li>Rennweg 89b</li>
+                                            <li>1030 Wien</li>
+                                            <li>Österreich</li>
+                                        </ul>
+                                    </span>
+                            </md-card-title-text>
+                        </md-card-title>
+                    </md-card>
+                </div>
+                <div class="flex-space-3" flex-gt-sm="20"></div>
+            </div>
+            <!-- shows when sideBar is closed -->
+            <div class="flex-wrapper" layout="row" layout-xs="column" flex ng-hide="$ctrl.opened()=== true">
+                <div class="flex-space-1" flex-gt-sm="15"></div>
+                <div class="flex-space-2" flex>
+                    <md-card>
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">Team</span>
+                                <span class="md-subhead"></span>
+                                <br>
+                                <div layout="column">
+                                    <div layout-padding layout="row">
+                                        <img class="team-zhuang" ng-src="components/material/brandy_zhuang.png">
+                                        <div layout="column" layout-align="center start">
+                                            <h2 class="team-name">Wei Zhuang</h2>
+                                            <h4 class="team-title">Projektleiter</h4>
+                                            <p class="team-description">
+                                                Projektmanagement<br>
+                                                Planung der didaktischen Konzepte<br>
+                                                Websiteprogrammierung <br>
+                                                Implementation der interaktiven Konzepte
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div layout-padding layout="row">
+                                        <img class="team-skrobic" ng-src="components/material/brandy_skrobic.png">
+                                        <div layout="column" layout-align="center start">
+                                            <h2 class="team-name">Stefan Skrobic</h2>
+                                            <h4 class="team-title">Stv. Projektleiter</h4>
+                                            <p class="team-description">
+                                                Projektmanagement<br>
+                                                Planung der didaktischen Konzepte<br>
+                                                Websiteprogrammierung <br>
+                                                Implementation der interaktiven Konzepte
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </md-card-title-text>
+                        </md-card-title>
+                    </md-card>
+                </div>
+                <div class="flex-space-contactInfo" flex>
+                    <md-card>
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">Kontakt</span>
+                                <span class="md-subhead">Falls Sie mit uns Kontakt aufnehmen möchten,
+                                    erreichen Sie uns unter folgenden E-Mail-Adressen:
+                                    <ul style="list-style-type:none">
+                                        <li>wei.zhuang@htl.rennweg.at</li>
+                                        <li>stefan.skrobic@htl.rennweg.at</li>
+                                    </ul>
+                                        oder Sie besuchen uns in der HTL Rennweg:
+                                        <ul style="list-style-type:none">
+                                            <li>Rennweg 89b</li>
+                                            <li>1030 Wien</li>
+                                            <li>Österreich</li>
+                                        </ul>
+                                    </span>
+                            </md-card-title-text>
+                        </md-card-title>
+                    </md-card>
+                </div>
+                <div class="flex-space-3" flex-gt-sm="15">
+                </div>
+            </div>
+        </md-content>
+    </div>
+</div>

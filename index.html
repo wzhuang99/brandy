@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de" ng-app="App">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Brandy</title>
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="icon" href="components/material/brandy_favicon.png">
+
+    <script src="node_modules/moment/min/moment.min.js"></script>
+    <script src="node_modules/moment/locale/de.js"></script>
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="node_modules/angular-cookies/angular-cookies.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js">x</script>
+    <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="node_modules/angular-material/angular-material.min.js"></script>
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+
+    <script src="node_modules/videogular/dist/videogular/videogular.js"></script>
+    <script src="node_modules/videogular-controls/vg-controls.js"></script>
+    <script src="node_modules/videogular-overlay-play/vg-overlay-play.js"></script>
+    <script src="node_modules/videogular-poster/vg-poster.js"></script>
+    <script src="node_modules/videogular-buffering/vg-buffering.js"></script>
+    <script src="node_modules/videogular-angulartics/vg-analytics.js"></script>
+    <script src="node_modules/videogular-dash/vg-dash.js"></script>
+    <script src="node_modules/videogular-youtube/youtube.js"></script>
+
+    <!--
+    <script src="vendor/angularjs-1.7.2/i18n/angular-locale_de.js"></script>-->
+
+
+    <script src="app.js"></script>
+    <script src="components/js/overview.js"></script>
+    <script src="components/js/side-navbar.js"></script>
+    <script src="components/js/impressum.js"></script>
+    <script src="components/js/projects.js"></script>
+    <script src="components/js/team.js"></script>
+    <script src="components/js/product.js"></script>
+    <script src="components/js/videoplayer.js"></script>
+    <script src="services/saveData.js"></script>
+    <script src="models/quiz.js"></script>
+
+
+</head>
+<body layout="column" ng-cloak>
+<ui-view></ui-view>
+</body>
+
+</html>
