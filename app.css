@@ -3,6 +3,39 @@
     padding: 0;
 }
 
+/***** mobile view *****/
+
+@media only screen and (max-width: 600px) {
+
+    videogular {
+        width: 192px;
+        height: 108px;
+    }
+
+    /***** navigation *****/
+
+    md-sidenav {
+        width: 100% !important;
+        max-width: 540px;
+    }
+
+    .nav-toolLogo {
+        padding:0.5%;
+        width: 35% !important;
+        height: 10%;
+    }
+
+
+    /***** team *****/
+
+    .team-skrobic, .team-zhuang{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:50%;
+        height:50%;
+    }
+}
 /***** navigation *****/
 
 .nav-transparent {
@@ -40,6 +73,10 @@ md-sidenav {
 
 .content {
     overflow:visible;
+}
+
+li {
+    margin-left: 5%;
 }
 
 
@@ -99,38 +136,4 @@ md-sidenav {
 
 .team-description {
     color: grey;
-}
-
-/***** mobile view *****/
-
-@media only screen and (max-width: 600px) {
-
-    videogular {
-        width: 192px;
-        height: 108px;
-    }
-
-    /***** navigation *****/
-
-    md-sidenav {
-        width: 100% !important;
-        max-width: 540px;
-    }
-
-    .nav-toolLogo {
-        padding:0.5%;
-        width: 35% !important;
-        height: 10%;
-    }
-
-
-    /***** team *****/
-
-    .team-skrobic, .team-zhuang{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width:50%;
-        height:50%;
-    }
 }
